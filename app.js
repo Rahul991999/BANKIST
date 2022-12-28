@@ -1,37 +1,34 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
-
 // Data
+
 const account1 = {
-  userName: 'js',
-  owner: 'Jonas Schmedtmann',
+  userName: 'rt',
+  owner: 'Rahul Thakare',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
 };
 
 const account2 = {
-  userName: 'jd',
-  owner: 'Jessica Davis',
+  userName: 'at',
+  owner: 'Aman Tajne',
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
 };
 
 const account3 = {
-  userName: 'stw',
-  owner: 'Steven Thomas Williams',
+  userName: 'hk',
+  owner: 'Himanshu Kotpalliwar',
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
   pin: 3333,
 };
 
 const account4 = {
-  userName: 'ss',
-  owner: 'Sarah Smith',
+  userName: 'mm',
+  owner: 'Mohit Musale',
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
   pin: 4444,
@@ -151,7 +148,7 @@ btnLogin.addEventListener('click', function (e) {
 
 let toTransfer;
 btnTransfer.addEventListener('click', function (e) {
-  e.preventDefault();  // prevents form submitting because that button is inside form element.
+  e.preventDefault(); 
   toTransfer = accounts.find(function (acc) {
     return acc.userName === inputTransferTo.value;
   });
@@ -206,7 +203,7 @@ btnLoan.addEventListener('click', function (e) {
 //CLOSE ACCOUNT
 
 btnClose.addEventListener('click', function (e) {
-  e.preventDefault();  // prevents form submitting because that button is inside form element.
+  e.preventDefault(); 
   let closeUser = inputCloseUsername.value;
   let closePass = Number(inputClosePin.value);
   if (closeUser === currentAccount.userName && closePass === currentAccount.pin) {
